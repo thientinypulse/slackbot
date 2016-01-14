@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160114132237) do
+ActiveRecord::Schema.define(version: 20160114135019) do
+
+  create_table "flash_cards", force: :cascade do |t|
+    t.string   "card_id"
+    t.string   "term"
+    t.string   "definition"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "username"
